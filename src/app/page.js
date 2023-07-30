@@ -8,6 +8,7 @@ import "../styles/globals.css";
 import styles from "../styles/index.module.css";
 import { Feed, Grid, Navbar, TopNavbar } from "../components";
 import Head from "next/head";
+import { changeUsername } from "../redux/slice/feedSlice";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -18,11 +19,16 @@ const App = () => {
   const error = useSelector((state) => state.feed.error);
   const page = useSelector((state) => state.feed.page);
   const user = useSelector((state) => state.feed.user);
+  const username=useSelector(state=>state.feed.username);
 
   useEffect(() => {
     dispatch(fetchFeed(page));
   }, [dispatch, page]);
-
+  useEffect(() => {
+    if(username !==""){
+      dispatch(changeUsername({username:""}))
+    }
+  })
   //////////// return the page /////////////////
   if (loader) {
     return (

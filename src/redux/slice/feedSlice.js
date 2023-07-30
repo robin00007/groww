@@ -8,12 +8,13 @@ const initialState = {
   feeds: [],
   user: [],
   username: "",
-  userDetails: {},
+  userDetails: null,
   userPhotos: [],
   isLoading: false,
   loader: true,
   error: null,
   page: 1,
+  allImageFetched:false,
 };
 /////////////////////////Feed Slice/////////////////////////////////////
 const feedSlice = createSlice({
@@ -29,6 +30,13 @@ const feedSlice = createSlice({
     changeUsername: (state, action) => {
       state.username = action.payload.username;
     },
+    resetPhotos:(state)=>{
+      state.userPhotos=[];
+    },
+    resetDetails:(state)=>{
+      state.userDetails={};
+    }
+
   },
   extraReducers: (builder) => {
 
@@ -88,10 +96,14 @@ const feedSlice = createSlice({
       state.loader = false;
       state.isLoading = false;
       console.log("photo action : ",action);
-      if(action.payload){
+      if(action.payload?.length>0){
         state.userPhotos = [...state.userPhotos, ...action.payload];
         state.photoCount=state.userPhotos.length;
       }
+      // if(action.payload.length==0){
+      //   state.allImageFetched=true;
+      // }
+
      
     });
     builder.addCase(fetchUserPhotos.rejected, (state,action) => {
@@ -103,7 +115,7 @@ const feedSlice = createSlice({
 });
 
 /////////////////////////Exporting Actions//////////////////////////////
-export const { addPage ,changeUsername ,resetPage } = feedSlice.actions;
+export const { addPage ,changeUsername ,resetPage,resetPhotos,resetDetails } = feedSlice.actions;
 
 /////////////////////////Exporting Reducer//////////////////////////////
 export default feedSlice.reducer;

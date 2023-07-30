@@ -8,7 +8,7 @@ import styles from "../../../styles/userPage.module.css";
 import userDetails from "../../../services/userDetails";
 import userPhotos from "../../../services/userPhotos";
 import { useDispatch, useSelector } from "react-redux";
-import { changeUsername} from "../../../redux/slice/feedSlice";
+import { changeUsername, resetDetails, resetPage, resetPhotos} from "../../../redux/slice/feedSlice";
 import {fetchUserDetails, fetchUserPhotos} from "../../../redux/action";
 const UserPage = ({params}) => {
 
@@ -23,6 +23,14 @@ const UserPage = ({params}) => {
   const error=useSelector(state=>state.feed.error);
   const pageNumber=useSelector(state=>state.feed.page);
   
+  useEffect(()=>{
+      if(pageNumber!==1){
+        dispatch(resetPage());
+      }
+      dispatch(resetPhotos());
+      dispatch(resetDetails());
+  },[])
+
   useEffect(()=>{
     dispatch(changeUsername({username:params.username}))
   },[params])
