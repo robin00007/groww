@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,300;1,500&family=Style+Script&display=swap');
+
+:root {
+  --primary-text-color: #5367ff;
+  --secondary-text-color: rgb(23, 23, 23);
+  --main-font: 'Style Script', cursive;
+  --secondary-font: 'Montserrat', sans-serif;
+  --primary-bg-color: white;
+  --secondary-bg-color: whiteSmoke;
+}
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #5367ff;
+  border-radius: 1rem;
+}
+
+.loader {
+  color: var(--primary-text-color);
+  font-family: var(--main-font);
+  font-size: 4rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--secondary-font);
+  /* overflow: hidden; */
+
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+
+
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+   
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Styles for laptops and desktops */
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Styles for large laptops and desktops */
+  
+
+}
+
+@media (min-width: 1200px) {
+  /* Styles for large desktops and monitors */
+}

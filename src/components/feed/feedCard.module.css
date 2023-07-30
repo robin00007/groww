@@ -1,0 +1,67 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--secondary-bg-color);
+    margin-bottom:2rem;
+    padding: 1rem;
+    height: fit-content;
+    border-radius: 1rem;
+}
+.count{
+    display: flex;
+    justify-content: space-between;
+    margin:1rem 0rem;
+}
+.username{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: normal;
+}
+.detail{
+    font-style: italic;
+}
+.imageContainer{
+    /* height: 40px; */
+    aspect-ratio: 1/1;
+    margin:0.5rem 0rem;
+    display: flex;
+    margin-right: 1rem;
+     
+}
+.userImage{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.userDetails{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background:linear-gradient(to right,white,transparent);
+    width: 100%;
+    padding-left: 1rem;
+}
+.username{
+    font-size: large;
+    font-weight: bold;
+}
+.image{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.hashImage{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left:0%;
+    z-index: 20;
+    background-size: cover;
+    filter: blur(20px);
+}

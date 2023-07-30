@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,200;1,300;1,500&family=Style+Script&display=swap');
+.container{
+    width: 100%;
+    padding:2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color:whitesmoke;
+}
+.image{
+    border-radius: 50%;
+}
+.detailContainer{
+    padding: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.username{
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin:0px
+}
+.title{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Style Script', cursive;
+    margin: 0px;
+    color:#5367ff;
+    text-decoration: none;
+}
+.socialInfo{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: light;
+}
+.socialInfo p{
+    padding:0 3rem 1rem 0;
+}
+
+@media (max-width : 768px){
+    .detailContainer{
+    align-items: center;
+    margin-top: 2rem;
+}
+}

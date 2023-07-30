@@ -1,0 +1,11 @@
+.moreLoader{
+    width: 100%;
+    padding:3rem;
+    font-size: 3rem;
+    color: (--color-primary);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color:red;
+    text-align: center;
+}

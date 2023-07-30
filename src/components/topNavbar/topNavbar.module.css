@@ -1,0 +1,44 @@
+.container {
+    background-color: var(--secondary-bg-color);
+    height: fit-content;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.quote {
+    font-weight: regular;
+    font-style: italic;
+    margin-left: 1rem;
+}
+
+.options {
+    display: flex;
+
+}
+
+.search {
+    border: none;
+    border-bottom: 1px solid var(--secondary-text-color);
+    padding: 0.5rem;
+    background-color: transparent;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.mode {
+    margin-left: 1rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.title {
+    color: var(--primary-text-color);
+    font-family: var(--main-font);
+    margin-right: 2rem;
+    font-size: 2rem;
+}
