@@ -5,6 +5,7 @@ import { addPage } from "../redux/slice/feedSlice";
 export default function useBottom(containerRef,item) {
   const dispatch=useDispatch();
   const page=useSelector((state)=>state.feed.page);
+  const allImageFetched=useSelector((state)=>state.feed.allImageFetched);
 
   useEffect(() => {
     const options = {
@@ -17,7 +18,9 @@ export default function useBottom(containerRef,item) {
       entries.forEach((entry) => {
         if (entry.isIntersecting || entry.intersectionRatio === 1.0) {
           console.log('Reached the bottom of the scroll!');
-          dispatch(addPage());
+          if(!allImageFetched){
+            dispatch(addPage());
+          }
           
         }
       });

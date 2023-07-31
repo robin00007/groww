@@ -35,6 +35,9 @@ const feedSlice = createSlice({
     },
     resetDetails:(state)=>{
       state.userDetails={};
+    },
+    resetAllImageFetched:(state)=>{
+      state.allImageFetched=false;
     }
 
   },
@@ -100,9 +103,9 @@ const feedSlice = createSlice({
         state.userPhotos = [...state.userPhotos, ...action.payload];
         state.photoCount=state.userPhotos.length;
       }
-      // if(action.payload.length==0){
-      //   state.allImageFetched=true;
-      // }
+      if(action.payload?.length===0){
+        state.allImageFetched=true;
+      }
 
      
     });
@@ -115,7 +118,7 @@ const feedSlice = createSlice({
 });
 
 /////////////////////////Exporting Actions//////////////////////////////
-export const { addPage ,changeUsername ,resetPage,resetPhotos,resetDetails } = feedSlice.actions;
+export const { addPage ,changeUsername ,resetPage,resetPhotos,resetDetails,resetAllImageFetched} = feedSlice.actions;
 
 /////////////////////////Exporting Reducer//////////////////////////////
 export default feedSlice.reducer;

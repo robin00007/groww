@@ -8,7 +8,7 @@ import "../styles/globals.css";
 import styles from "../styles/index.module.css";
 import { Feed, Grid, Navbar, TopNavbar } from "../components";
 import Head from "next/head";
-import { changeUsername } from "../redux/slice/feedSlice";
+import { changeUsername, resetAllImageFetched } from "../redux/slice/feedSlice";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -23,6 +23,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(fetchFeed(page));
+    dispatch(resetAllImageFetched());
   }, [dispatch, page]);
   useEffect(() => {
     if(username !==""){

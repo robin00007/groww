@@ -17,6 +17,7 @@
      margin: 2rem;
      background-color:pink;
      overflow-y: auto;
+     position: relative;
  }
  
  .title {

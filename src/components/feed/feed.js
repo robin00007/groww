@@ -11,7 +11,6 @@ import isBottom from "../../services/isBottom";
 const Feed = ({ item, index, arr }) => {
 
   const [imageLoaded, setImageLoaded] = useState(false);
-
   const containerRef = useRef(null);
 
   isBottom(containerRef, item);
@@ -68,6 +67,7 @@ const Feed = ({ item, index, arr }) => {
           ? item.alt_description
           : "nothing about the image is there"}
       </p>
+
     </Link>
   );
 };
