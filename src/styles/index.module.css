@@ -15,8 +15,7 @@
      flex-direction: column;
      padding: 1rem;
      margin: 2rem;
-     /* background-color:var(--primary-text-color); */
-     /* background-color:whitesmoke; */
+     background-color:pink;
      overflow-y: auto;
      position: relative;
  }

@@ -9,10 +9,10 @@ import "../styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// export const metadata = {
-//   title: 'SocialFly',
-//   description: 'App for the social Butterflies',
-// }
+export const metadata = {
+  title: 'SocialFly',
+  description: 'App for the social Butterflies',
+}
 
 export default function RootLayout({ children }) {
   return (

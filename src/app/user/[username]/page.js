@@ -1,12 +1,9 @@
 "use client"
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import { useEffect} from "react";
 
 import { Grid, UserCard } from "../../../components";
 import styles from "../../../styles/userPage.module.css";
 
-import userDetails from "../../../services/userDetails";
-import userPhotos from "../../../services/userPhotos";
 import { useDispatch, useSelector } from "react-redux";
 import { changeUsername, resetDetails, resetPage, resetPhotos} from "../../../redux/slice/feedSlice";
 import {fetchUserDetails, fetchUserPhotos} from "../../../redux/action";
