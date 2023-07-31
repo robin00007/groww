@@ -29,20 +29,20 @@ const UserPage = ({params}) => {
       }
       dispatch(resetPhotos());
       dispatch(resetDetails());
-  },[])
+  },[dispatch])
 
   useEffect(()=>{
     dispatch(changeUsername({username:params.username}))
-  },[params])
+  },[params,dispatch])
   
   useEffect(()=>{
     dispatch(fetchUserDetails(username));
     dispatch(fetchUserPhotos({pageNumber,username}));
-  },[username])
+  },[username,dispatch])
 
   useEffect(()=>{
     dispatch(fetchUserPhotos({pageNumber,username}));
-  },[pageNumber])
+  },[pageNumber,dispatch])
   
   if (loader){
     return <div className={styles.loader}>Socialfly............</div>;
