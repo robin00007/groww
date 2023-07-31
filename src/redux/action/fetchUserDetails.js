@@ -7,7 +7,7 @@ export const fetchUserDetails = createAsyncThunk(
       if (username) {
         const result = await axios({
           method: "get",
-          url: `https://api.unsplash.com/users/${username}?client_id=gB0miyPX9vZmDP8BK8Ltc9co495f4xQyoA3QPcCgB7Y`,
+          url: `https://api.unsplash.com/users/${username}?client_id=${process.env.NEXT_PUBLIC_ACCESS_KEY}`,
         });
         return result.data;
       }
